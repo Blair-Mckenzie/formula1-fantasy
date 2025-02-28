@@ -1,10 +1,10 @@
-package main
+package models
 
 import "time"
 
 type Race struct {
 	CircuitId        int
-	RaceId           int
+	RaceId           string
 	RaceName         string
 	CountryId        int
 	CountryCode      string

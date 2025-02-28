@@ -2,6 +2,8 @@ module root
 
 go 1.24.0
 
+require firebase.google.com/go v3.13.0+incompatible
+
 require (
 	cel.dev/expr v0.21.2 // indirect
 	cloud.google.com/go v0.118.3 // indirect
@@ -13,7 +15,6 @@ require (
 	cloud.google.com/go/longrunning v0.6.4 // indirect
 	cloud.google.com/go/monitoring v1.24.0 // indirect
 	cloud.google.com/go/storage v1.50.0 // indirect
-	firebase.google.com/go v3.13.0+incompatible // indirect
 	github.com/GoogleCloudPlatform/opentelemetry-operations-go/detectors/gcp v1.27.0 // indirect
 	github.com/GoogleCloudPlatform/opentelemetry-operations-go/exporter/metric v0.51.0 // indirect
 	github.com/GoogleCloudPlatform/opentelemetry-operations-go/internal/resourcemapping v0.51.0 // indirect

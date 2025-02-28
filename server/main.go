@@ -1,35 +1,21 @@
 package main
 
 import (
-	"context"
 	"encoding/json"
 	"fmt"
 	"log"
 	"os"
 
 	"root/models"
-
-	"cloud.google.com/go/firestore"
-	firebase "firebase.google.com/go"
 )
 
 func main() {
 	os.Setenv("FIRESTORE_EMULATOR_HOST", "localhost:8080")
-	ctx := context.Background()
-	conf := &firebase.Config{ProjectID: "formula1-fantasy-31eb5"}
-	app, err := firebase.NewApp(ctx, conf)
+	client, err := createClient()
 
 	if err != nil {
-		log.Printf("error initialising app: %v", err)
-		log.Fatalln(err)
+		log.Printf("Error creating client %v", err)
 	}
-
-	client, err := app.Firestore(ctx)
-	if err != nil {
-		log.Print("error initialising client")
-		log.Fatalln(err)
-	}
-
 	races, err := LoadData("races.json")
 	if err != nil {
 		log.Fatalf("Error loading data %v", err)
@@ -49,6 +35,7 @@ func main() {
 	}
 }
 
+
 func LoadData(filename string) ([]models.Race, error) {
 	file, err := os.Open(filename)
 	if err != nil {
@@ -64,8 +51,3 @@ func LoadData(filename string) ([]models.Race, error) {
 	return races, nil
 }
 
-func InsertGrandPrix(client *firestore.Client, race models.Race) error {
-	ctx := context.Background()
-	_, err := client.Collection("races").Doc(race.RaceId).Set(ctx, race)
-	return err
-}

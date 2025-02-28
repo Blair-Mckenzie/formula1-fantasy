@@ -4,9 +4,12 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
+	"net/http"
 	"os"
 
 	"root/models"
+
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
@@ -30,11 +33,21 @@ func main() {
 		}
 	}
 
-	if err != nil {
-		log.Printf("Error occurred when creating entry: %v", err)
-	}
-}
+	router := gin.Default()
 
+	api := router.Group("/api/formula1")
+	{
+		api.GET("/ping", func(c *gin.Context) {
+			c.JSON(http.StatusOK, gin.H{"message": "pong"})
+		})
+
+		api.GET("/users", func(c *gin.Context) {
+			c.JSON(http.StatusOK, gin.H{"users": []string{"Test", "AnotherTest"}})
+		})
+	}
+
+	router.Run(":3000")
+}
 
 func LoadData(filename string) ([]models.Race, error) {
 	file, err := os.Open(filename)
@@ -50,4 +63,3 @@ func LoadData(filename string) ([]models.Race, error) {
 
 	return races, nil
 }
-

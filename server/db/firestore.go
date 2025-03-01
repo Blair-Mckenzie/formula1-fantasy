@@ -1,4 +1,4 @@
-package main
+package db
 
 import (
 	"context"
@@ -9,7 +9,7 @@ import (
 	firebase "firebase.google.com/go"
 )
 
-func createClient() (*firestore.Client, error) {
+func CreateClient() (*firestore.Client, error) {
 	ctx := context.Background()
 	conf := &firebase.Config{ProjectID: "formula1-fantasy-31eb5"}
 	app, err := firebase.NewApp(ctx, conf)

@@ -3,15 +3,24 @@ package models
 import "time"
 
 type Race struct {
-	CircuitId        int
-	RaceId           string
-	RaceName         string
-	CountryId        int
-	CountryCode      string
-	CountryName      string
-	OfficialRaceName string
-	DateStart        time.Time
-	CutoffTime       time.Time
-	Year             int
-	IsSprint         bool
+	Year       int       `json:"year"`
+	Round      int       `json:"round"`
+	RaceId     string    `json:"raceId"`
+	RaceName   string    `json:"raceName"`
+	Circuit    Circuit   `json:"circuit"`
+	Date       time.Time `json:"date"`
+	CutoffTime time.Time `json:"cutoffTime"`
+}
+
+type Circuit struct {
+	CircuitId   string   `json:"circuitId"`
+	URL         string   `json:"url"`
+	CircuitName string   `json:"circuitName"`
+	Location    Location `json:"location"`
+}
+
+type Location struct {
+	Latitude  string `json:"lat"`
+	Longitude string `json:"lng"`
+	Country   string `json:"country"`
 }

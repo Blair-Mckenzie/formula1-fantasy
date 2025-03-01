@@ -1,171 +1,434 @@
 [
     {
-        "CircuitId": 1,
-        "RaceId": "beb8937e-fd81-4fcb-88d8-4c8ae6a946cd",
-        "RaceName": "Australian Grand Prix",
-        "CountryId": 36,
-        "CountryCode": "AU",
-        "CountryName": "Australia",
-        "OfficialRaceName": "Formula 1 Rolex Australian Grand Prix 2025",
-        "DateStart": "2025-03-16T04:00:00Z",
-        "CutoffTime": "2025-03-15T06:00:00Z",
-        "Year": 2025,
-        "IsSprint": false
+        "year": 2025,
+        "round": 1,
+        "raceId": "c7983276-8ab1-4aee-8958-80b7012bdcaa",
+        "raceName": "Australian Grand Prix",
+        "circuit": {
+            "circuitId": "albert_park",
+            "url": "https://en.wikipedia.org/wiki/Albert_Park_Circuit",
+            "circuitName": "Albert Park Grand Prix Circuit",
+            "location": {
+                "lat": "-37.8497",
+                "lng": "144.968",
+                "country": "Australia"
+            }
+        },
+        "date": "2025-03-16T04:00:00Z",
+        "cutoffTime": "2025-03-15T04:00:00Z"
     },
     {
-        "CircuitId": 2,
-        "RaceId": "6fd85b0e-65d1-41d8-9308-fdcd7a1adb5a",
-        "RaceName": "Chinese Grand Prix",
-        "CountryId": 156,
-        "CountryCode": "CN",
-        "CountryName": "China",
-        "OfficialRaceName": "Formula 1 Heineken Chinese Grand Prix 2025",
-        "DateStart": "2025-03-23T07:00:00Z",
-        "CutoffTime": "2025-03-22T09:00:00Z",
-        "Year": 2025,
-        "IsSprint": true
+        "year": 2025,
+        "round": 2,
+        "raceId": "f70f7eb5-0ee2-44c0-a7ba-cae1b9d4f36a",
+        "raceName": "Chinese Grand Prix",
+        "circuit": {
+            "circuitId": "shanghai",
+            "url": "https://en.wikipedia.org/wiki/Shanghai_International_Circuit",
+            "circuitName": "Shanghai International Circuit",
+            "location": {
+                "lat": "31.3389",
+                "lng": "121.22",
+                "country": "China"
+            }
+        },
+        "date": "2025-03-23T07:00:00Z",
+        "cutoffTime": "2025-03-21T06:30:00Z"
     },
     {
-        "CircuitId": 3,
-        "RaceId": "5553dcc5-1663-4c1b-a368-45bbcdeee888",
-        "RaceName": "Japanese Grand Prix",
-        "CountryId": 392,
-        "CountryCode": "JP",
-        "CountryName": "Japan",
-        "OfficialRaceName": "Formula 1 Honda Japanese Grand Prix 2025",
-        "DateStart": "2025-04-06T06:00:00Z",
-        "CutoffTime": "2025-04-05T08:00:00Z",
-        "Year": 2025,
-        "IsSprint": false
+        "year": 2025,
+        "round": 3,
+        "raceId": "a74bb6c6-1b0e-491b-b47b-4a2c0da1f61d",
+        "raceName": "Japanese Grand Prix",
+        "circuit": {
+            "circuitId": "suzuka",
+            "url": "https://en.wikipedia.org/wiki/Suzuka_International_Racing_Course",
+            "circuitName": "Suzuka Circuit",
+            "location": {
+                "lat": "34.843100000000014",
+                "lng": "136.541",
+                "country": "Japan"
+            }
+        },
+        "date": "2025-04-06T06:00:00Z",
+        "cutoffTime": "2025-04-05T06:00:00Z"
     },
     {
-        "CircuitId": 4,
-        "RaceId": "5dd0d1fb-041c-4245-9ee7-3cb65ef3c5d2",
-        "RaceName": "Bahrain Grand Prix",
-        "CountryId": 48,
-        "CountryCode": "BH",
-        "CountryName": "Bahrain",
-        "OfficialRaceName": "Formula 1 Gulf Air Bahrain Grand Prix 2025",
-        "DateStart": "2025-04-13T15:00:00Z",
-        "CutoffTime": "2025-04-12T17:00:00Z",
-        "Year": 2025,
-        "IsSprint": false
+        "year": 2025,
+        "round": 4,
+        "raceId": "9f983a0f-7084-4149-b464-49ba0eceeb4b",
+        "raceName": "Bahrain Grand Prix",
+        "circuit": {
+            "circuitId": "bahrain",
+            "url": "https://en.wikipedia.org/wiki/Bahrain_International_Circuit",
+            "circuitName": "Bahrain International Circuit",
+            "location": {
+                "lat": "26.0325",
+                "lng": "50.5106",
+                "country": "Bahrain"
+            }
+        },
+        "date": "2025-04-13T16:00:00Z",
+        "cutoffTime": "2025-04-12T16:00:00Z"
     },
     {
-        "CircuitId": 5,
-        "RaceId": "c0b0c634-f424-4305-ac83-3f63d0db2a50",
-        "RaceName": "Saudi Arabian Grand Prix",
-        "CountryId": 682,
-        "CountryCode": "SA",
-        "CountryName": "Saudi Arabia",
-        "OfficialRaceName": "Formula 1 STC Saudi Arabian Grand Prix 2025",
-        "DateStart": "2025-04-20T17:00:00Z",
-        "CutoffTime": "2025-04-19T19:00:00Z",
-        "Year": 2025,
-        "IsSprint": false
+        "year": 2025,
+        "round": 5,
+        "raceId": "365ba27f-5e6a-43b9-8732-8ce5e15d6671",
+        "raceName": "Saudi Arabian Grand Prix",
+        "circuit": {
+            "circuitId": "jeddah",
+            "url": "https://en.wikipedia.org/wiki/Jeddah_Corniche_Circuit",
+            "circuitName": "Jeddah Corniche Circuit",
+            "location": {
+                "lat": "21.631899999999998",
+                "lng": "39.1044",
+                "country": "Saudi Arabia"
+            }
+        },
+        "date": "2025-04-20T18:00:00Z",
+        "cutoffTime": "2025-04-19T17:00:00Z"
     },
     {
-        "CircuitId": 6,
-        "RaceId": "97ccc574-738a-4a4d-b4c8-0fb8388e2d18",
-        "RaceName": "Miami Grand Prix",
-        "CountryId": 840,
-        "CountryCode": "US",
-        "CountryName": "United States",
-        "OfficialRaceName": "Formula 1 Crypto.com Miami Grand Prix 2025",
-        "DateStart": "2025-05-04T20:00:00Z",
-        "CutoffTime": "2025-05-03T22:00:00Z",
-        "Year": 2025,
-        "IsSprint": true
+        "year": 2025,
+        "round": 6,
+        "raceId": "0172d2df-d4b3-4cd2-9475-1dadfa223d8a",
+        "raceName": "Miami Grand Prix",
+        "circuit": {
+            "circuitId": "miami",
+            "url": "https://en.wikipedia.org/wiki/Miami_International_Autodrome",
+            "circuitName": "Miami International Autodrome",
+            "location": {
+                "lat": "25.9581",
+                "lng": "-80.2389",
+                "country": "USA"
+            }
+        },
+        "date": "2025-05-04T21:00:00Z",
+        "cutoffTime": "2025-05-02T20:30:00Z"
     },
     {
-        "CircuitId": 7,
-        "RaceId": "fab9a6bd-e4ff-4840-8227-57f94949fb7a",
-        "RaceName": "Emilia-Romagna Grand Prix",
-        "CountryId": 380,
-        "CountryCode": "IT",
-        "CountryName": "Italy",
-        "OfficialRaceName": "Formula 1 Qatar Airways Emilia-Romagna Grand Prix 2025",
-        "DateStart": "2025-05-18T13:00:00Z",
-        "CutoffTime": "2025-05-17T15:00:00Z",
-        "Year": 2025,
-        "IsSprint": false
+        "year": 2025,
+        "round": 7,
+        "raceId": "56f0c284-3637-4a37-9996-fede5b87fce5",
+        "raceName": "Emilia Romagna Grand Prix",
+        "circuit": {
+            "circuitId": "imola",
+            "url": "https://en.wikipedia.org/wiki/Imola_Circuit",
+            "circuitName": "Autodromo Enzo e Dino Ferrari",
+            "location": {
+                "lat": "44.343899999999984",
+                "lng": "11.7167",
+                "country": "Italy"
+            }
+        },
+        "date": "2025-05-18T14:00:00Z",
+        "cutoffTime": "2025-05-17T14:00:00Z"
     },
     {
-        "CircuitId": 8,
-        "RaceId": "6cfac9d9-518d-4aff-8b79-95353771d3fc",
-        "RaceName": "Monaco Grand Prix",
-        "CountryId": 492,
-        "CountryCode": "MC",
-        "CountryName": "Monaco",
-        "OfficialRaceName": "Formula 1 Grand Prix de Monaco 2025",
-        "DateStart": "2025-05-25T13:00:00Z",
-        "CutoffTime": "2025-05-24T15:00:00Z",
-        "Year": 2025,
-        "IsSprint": false
+        "year": 2025,
+        "round": 8,
+        "raceId": "d5c1c550-d731-449a-a25b-a8064b6aa490",
+        "raceName": "Monaco Grand Prix",
+        "circuit": {
+            "circuitId": "monaco",
+            "url": "https://en.wikipedia.org/wiki/Circuit_de_Monaco",
+            "circuitName": "Circuit de Monaco",
+            "location": {
+                "lat": "43.7347",
+                "lng": "7.42056",
+                "country": "Monaco"
+            }
+        },
+        "date": "2025-05-25T14:00:00Z",
+        "cutoffTime": "2025-05-24T14:00:00Z"
     },
     {
-        "CircuitId": 9,
-        "RaceId": "d50274df-29b0-482b-8c88-2b0341612361",
-        "RaceName": "Austrian Grand Prix",
-        "CountryId": 40,
-        "CountryCode": "AT",
-        "CountryName": "Austria",
-        "OfficialRaceName": "Formula 1 Qatar Airways Austrian Grand Prix 2025",
-        "DateStart": "2025-06-29T13:00:00Z",
-        "CutoffTime": "2025-06-28T15:00:00Z",
-        "Year": 2025,
-        "IsSprint": true
+        "year": 2025,
+        "round": 9,
+        "raceId": "7f01e680-1cdd-4b2d-bed7-b09489a1a73d",
+        "raceName": "Spanish Grand Prix",
+        "circuit": {
+            "circuitId": "catalunya",
+            "url": "https://en.wikipedia.org/wiki/Circuit_de_Barcelona-Catalunya",
+            "circuitName": "Circuit de Barcelona-Catalunya",
+            "location": {
+                "lat": "41.57",
+                "lng": "2.26111",
+                "country": "Spain"
+            }
+        },
+        "date": "2025-06-01T14:00:00Z",
+        "cutoffTime": "2025-05-31T14:00:00Z"
     },
     {
-        "CircuitId": 10,
-        "RaceId": "775c7887-a07a-4bc4-9694-455546040f73",
-        "RaceName": "Brazilian Grand Prix",
-        "CountryId": 76,
-        "CountryCode": "BR",
-        "CountryName": "Brazil",
-        "OfficialRaceName": "Formula 1 Heineken Grande Prêmio de São Paulo 2025",
-        "DateStart": "2025-11-09T17:00:00Z",
-        "CutoffTime": "2025-11-08T19:00:00Z",
-        "Year": 2025,
-        "IsSprint": true
+        "year": 2025,
+        "round": 10,
+        "raceId": "8b3475b6-4aac-47a7-900c-c66a06ddecc4",
+        "raceName": "Canadian Grand Prix",
+        "circuit": {
+            "circuitId": "villeneuve",
+            "url": "https://en.wikipedia.org/wiki/Circuit_Gilles_Villeneuve",
+            "circuitName": "Circuit Gilles Villeneuve",
+            "location": {
+                "lat": "45.5",
+                "lng": "-73.5228",
+                "country": "Canada"
+            }
+        },
+        "date": "2025-06-15T19:00:00Z",
+        "cutoffTime": "2025-06-14T20:00:00Z"
     },
     {
-        "CircuitId": 11,
-        "RaceId": "204cf351-0895-402f-8e05-05214c31ced2",
-        "RaceName": "Las Vegas Grand Prix",
-        "CountryId": 840,
-        "CountryCode": "US",
-        "CountryName": "United States",
-        "OfficialRaceName": "Formula 1 Las Vegas Grand Prix 2025",
-        "DateStart": "2025-11-22T06:00:00Z",
-        "CutoffTime": "2025-11-21T08:00:00Z",
-        "Year": 2025,
-        "IsSprint": false
+        "year": 2025,
+        "round": 11,
+        "raceId": "bfad3126-9031-4e00-b4b6-15dd17d3f1cc",
+        "raceName": "Austrian Grand Prix",
+        "circuit": {
+            "circuitId": "red_bull_ring",
+            "url": "https://en.wikipedia.org/wiki/Red_Bull_Ring",
+            "circuitName": "Red Bull Ring",
+            "location": {
+                "lat": "47.2197",
+                "lng": "14.7647",
+                "country": "Austria"
+            }
+        },
+        "date": "2025-06-29T14:00:00Z",
+        "cutoffTime": "2025-06-28T14:00:00Z"
     },
     {
-        "CircuitId": 12,
-        "RaceId": "6d49fe10-5344-4199-b690-154344e57c7f",
-        "RaceName": "Qatar Grand Prix",
-        "CountryId": 634,
-        "CountryCode": "QA",
-        "CountryName": "Qatar",
-        "OfficialRaceName": "Formula 1 Qatar Airways Qatar Grand Prix 2025",
-        "DateStart": "2025-11-30T16:00:00Z",
-        "CutoffTime": "2025-11-29T18:00:00Z",
-        "Year": 2025,
-        "IsSprint": true
+        "year": 2025,
+        "round": 12,
+        "raceId": "8820e471-9e5e-4ee0-a69e-d985504a0621",
+        "raceName": "British Grand Prix",
+        "circuit": {
+            "circuitId": "silverstone",
+            "url": "https://en.wikipedia.org/wiki/Silverstone_Circuit",
+            "circuitName": "Silverstone Circuit",
+            "location": {
+                "lat": "52.0786",
+                "lng": "-1.01694",
+                "country": "UK"
+            }
+        },
+        "date": "2025-07-06T15:00:00Z",
+        "cutoffTime": "2025-07-05T14:00:00Z"
     },
     {
-        "CircuitId": 24,
-        "RaceId": "73959e7b-993a-4359-a3a5-fc63af37716f",
-        "RaceName": "Abu Dhabi Grand Prix",
-        "CountryId": 784,
-        "CountryCode": "UAE",
-        "CountryName": "United Arab Emirates",
-        "OfficialRaceName": "Formula 1 Etihad Airways Abu Dhabi Grand Prix 2025",
-        "DateStart": "2025-12-07T13:00:00Z",
-        "CutoffTime": "2025-12-07T11:00:00Z",
-        "Year": 2025,
-        "IsSprint": false
+        "year": 2025,
+        "round": 13,
+        "raceId": "970b5140-5263-439c-9430-1fa04315f66e",
+        "raceName": "Belgian Grand Prix",
+        "circuit": {
+            "circuitId": "spa",
+            "url": "https://en.wikipedia.org/wiki/Circuit_de_Spa-Francorchamps",
+            "circuitName": "Circuit de Spa-Francorchamps",
+            "location": {
+                "lat": "50.4372",
+                "lng": "5.97139",
+                "country": "Belgium"
+            }
+        },
+        "date": "2025-07-27T14:00:00Z",
+        "cutoffTime": "2025-07-25T14:30:00Z"
+    },
+    {
+        "year": 2025,
+        "round": 14,
+        "raceId": "3a8083b6-7dd0-43b2-9270-25d15dee220a",
+        "raceName": "Hungarian Grand Prix",
+        "circuit": {
+            "circuitId": "hungaroring",
+            "url": "https://en.wikipedia.org/wiki/Hungaroring",
+            "circuitName": "Hungaroring",
+            "location": {
+                "lat": "47.5789",
+                "lng": "19.2486",
+                "country": "Hungary"
+            }
+        },
+        "date": "2025-08-03T14:00:00Z",
+        "cutoffTime":"2025-08-02T14:00:00Z"
+    },
+    {
+        "year": 2025,
+        "round": 15,
+        "raceId": "c60734dc-4103-43ee-9a67-883cc6d41fcb",
+        "raceName": "Dutch Grand Prix",
+        "circuit": {
+            "circuitId": "zandvoort",
+            "url": "https://en.wikipedia.org/wiki/Circuit_Zandvoort",
+            "circuitName": "Circuit Park Zandvoort",
+            "location": {
+                "lat": "52.3888",
+                "lng": "4.54092",
+                "country": "Netherlands"
+            }
+        },
+        "date": "2025-08-31T14:00:00Z",
+        "cutoffTime": "2025-08-30T13:00:00Z"
+    },
+    {
+        "year": 2025,
+        "round": 16,
+        "raceId": "180a35ba-fc39-48d5-8966-d5109b597292",
+        "raceName": "Italian Grand Prix",
+        "circuit": {
+            "circuitId": "monza",
+            "url": "https://en.wikipedia.org/wiki/Monza_Circuit",
+            "circuitName": "Autodromo Nazionale di Monza",
+            "location": {
+                "lat": "45.615599999999986",
+                "lng": "9.28111",
+                "country": "Italy"
+            }
+        },
+        "date": "2025-09-07T14:00:00Z",
+        "cutoffTime": "2025-09-06T14:00:00Z"
+    },
+    {
+        "year": 2025,
+        "round": 17,
+        "raceId": "f231c386-abcb-40cb-aee6-d40edc07ac36",
+        "raceName": "Azerbaijan Grand Prix",
+        "circuit": {
+            "circuitId": "baku",
+            "url": "https://en.wikipedia.org/wiki/Baku_City_Circuit",
+            "circuitName": "Baku City Circuit",
+            "location": {
+                "lat": "40.3725",
+                "lng": "49.8533",
+                "country": "Azerbaijan"
+            }
+        },
+        "date": "2025-09-21T12:00:00Z",
+        "cutoffTime": "2025-09-20T12:00:00Z"
+    },
+    {
+        "year": 2025,
+        "round": 18,
+        "raceId": "7d05c127-c156-412c-90ff-57d14d40cf9b",
+        "raceName": "Singapore Grand Prix",
+        "circuit": {
+            "circuitId": "marina_bay",
+            "url": "https://en.wikipedia.org/wiki/Marina_Bay_Street_Circuit",
+            "circuitName": "Marina Bay Street Circuit",
+            "location": {
+                "lat": "1.2914",
+                "lng": "103.864",
+                "country": "Singapore"
+            }
+        },
+        "date": "2025-10-05T13:00:00Z",
+        "cutoffTime": "2025-10-04T13:00:00Z"
+    },
+    {
+        "year": 2025,
+        "round": 19,
+        "raceId": "1d644785-bd62-4698-b321-37e7a5b4dcbf",
+        "raceName": "United States Grand Prix",
+        "circuit": {
+            "circuitId": "americas",
+            "url": "https://en.wikipedia.org/wiki/Circuit_of_the_Americas",
+            "circuitName": "Circuit of the Americas",
+            "location": {
+                "lat": "30.1328",
+                "lng": "-97.6411",
+                "country": "USA"
+            }
+        },
+        "date": "2025-10-19T20:00:00Z",
+        "cutoffTime": "2025-10-17T21:30:00Z"
+    },
+    {
+        "year": 2025,
+        "round": 20,
+        "raceId": "0c1cd987-8c3b-4631-9dd2-a63252217237",
+        "raceName": "Mexico City Grand Prix",
+        "circuit": {
+            "circuitId": "rodriguez",
+            "url": "https://en.wikipedia.org/wiki/Aut%C3%B3dromo_Hermanos_Rodr%C3%ADguez",
+            "circuitName": "Autódromo Hermanos Rodríguez",
+            "location": {
+                "lat": "19.4042",
+                "lng": "-99.0907",
+                "country": "Mexico"
+            }
+        },
+        "date": "2025-10-26T20:00:00Z",
+        "cutoffTime": "2025-10-25T21:00:00Z"
+    },
+    {
+        "year": 2025,
+        "round": 21,
+        "raceId": "b929f907-df03-4627-b3fd-3bdb6cb1324e",
+        "raceName": "São Paulo Grand Prix",
+        "circuit": {
+            "circuitId": "interlagos",
+            "url": "https://en.wikipedia.org/wiki/Interlagos_Circuit",
+            "circuitName": "Autódromo José Carlos Pace",
+            "location": {
+                "lat": "-23.7036",
+                "lng": "-46.69969999999999",
+                "country": "Brazil"
+            }
+        },
+        "date": "2025-11-09T17:00:00Z",
+        "cutoffTime": "2025-11-07T17:30:00Z"
+    },
+    {
+        "year": 2025,
+        "round": 22,
+        "raceId": "4cffb73d-f9ca-4256-862d-32efc168427d",
+        "raceName": "Las Vegas Grand Prix",
+        "circuit": {
+            "circuitId": "vegas",
+            "url": "https://en.wikipedia.org/wiki/Las_Vegas_Grand_Prix#Circuit",
+            "circuitName": "Las Vegas Strip Street Circuit",
+            "location": {
+                "lat": "36.1147",
+                "lng": "-115.173",
+                "country": "United States"
+            }
+        },
+        "date": "2025-11-22T04:00:00Z",
+        "cutoffTime": "2025-11-22T03:00:00Z"
+    },
+    {
+        "year": 2025,
+        "round": 23,
+        "raceId": "e08e3dab-9a32-45da-af65-130ef1928c13",
+        "raceName": "Qatar Grand Prix",
+        "circuit": {
+            "circuitId": "losail",
+            "url": "https://en.wikipedia.org/wiki/Lusail_International_Circuit",
+            "circuitName": "Losail International Circuit",
+            "location": {
+                "lat": "25.48999999999998",
+                "lng": "51.4542",
+                "country": "Qatar"
+            }
+        },
+        "date": "2025-11-30T16:00:00Z",
+        "cutoffTime": "2025-11-28T16:30:00Z"
+    },
+    {
+        "year": 2025,
+        "round": 24,
+        "raceId": "e2268351-269e-4b4d-b29d-82c2127969c0",
+        "raceName": "Abu Dhabi Grand Prix",
+        "circuit": {
+            "circuitId": "yas_marina",
+            "url": "https://en.wikipedia.org/wiki/Yas_Marina_Circuit",
+            "circuitName": "Yas Marina Circuit",
+            "location": {
+                "lat": "24.4672",
+                "lng": "54.6031",
+                "country": "UAE"
+            }
+        },
+        "date": "2025-12-07T13:00:00Z",
+        "cutoffTime": "2025-12-06T13:00:00Z"
     }
 ]

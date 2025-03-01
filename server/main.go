@@ -8,13 +8,13 @@ import (
 	"os"
 
 	"root/models"
-
+	"root/db"
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
 	os.Setenv("FIRESTORE_EMULATOR_HOST", "localhost:8080")
-	client, err := createClient()
+	client, err := db.CreateClient()
 
 	if err != nil {
 		log.Printf("Error creating client %v", err)
@@ -25,7 +25,7 @@ func main() {
 	}
 
 	for _, race := range races {
-		err := InsertGrandPrix(client, race)
+		err := db.InsertGrandPrix(client, race)
 		if err != nil {
 			log.Printf("Failed to insert Grand Prix (%s): %v", race.RaceName, err)
 		} else {

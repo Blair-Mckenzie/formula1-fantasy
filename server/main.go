@@ -1,25 +1,34 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
 	"log"
-	"net/http"
 	"os"
+	"time"
 
-	"root/models"
 	"root/db"
+	"root/routes"
+	"root/utils"
+
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
-	os.Setenv("FIRESTORE_EMULATOR_HOST", "localhost:8080")
-	client, err := db.CreateClient()
+	err := utils.StartFirestoreEmulator()
+	if err != nil {
+		log.Fatalf("Failed to start Firestore emulator: %v", err)
+	}
 
+	time.Sleep(3 * time.Second)
+
+	os.Setenv("FIRESTORE_EMULATOR_HOST", "localhost:8080")
+
+	client, err := db.CreateClient()
 	if err != nil {
 		log.Printf("Error creating client %v", err)
 	}
-	races, err := LoadData("races.json")
+
+	races, err := utils.LoadData("races.json")
 	if err != nil {
 		log.Fatalf("Error loading data %v", err)
 	}
@@ -35,31 +44,9 @@ func main() {
 
 	router := gin.Default()
 
-	api := router.Group("/api/formula1")
-	{
-		api.GET("/ping", func(c *gin.Context) {
-			c.JSON(http.StatusOK, gin.H{"message": "pong"})
-		})
+	api := router.Group("/api")
 
-		api.GET("/users", func(c *gin.Context) {
-			c.JSON(http.StatusOK, gin.H{"users": []string{"Test", "AnotherTest"}})
-		})
-	}
+	routes.SetupV1Routes(api)
 
 	router.Run(":3000")
-}
-
-func LoadData(filename string) ([]models.Race, error) {
-	file, err := os.Open(filename)
-	if err != nil {
-		return nil, err
-	}
-	defer file.Close()
-
-	var races []models.Race
-	if err := json.NewDecoder(file).Decode(&races); err != nil {
-		return nil, err
-	}
-
-	return races, nil
 }

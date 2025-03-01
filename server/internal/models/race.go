@@ -20,7 +20,7 @@ type Circuit struct {
 }
 
 type Location struct {
-	Latitude  string `json:"lat"`
-	Longitude string `json:"lng"`
+	Latitude  float32 `json:"lat"`
+	Longitude float32 `json:"lng"`
 	Country   string `json:"country"`
 }

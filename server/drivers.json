@@ -1,0 +1,102 @@
+[
+    {
+        "Id": "550e8400-e29b-41d4-a716-446655440000",
+        "Name": "Max Verstappen",
+        "Team": "Oracle Red Bull Racing"
+    },
+    {
+        "Id": "550e8400-e29b-41d4-a716-446655440001",
+        "Name": "Liam Lawson",
+        "Team": "Oracle Red Bull Racing"
+    },
+    {
+        "Id": "550e8400-e29b-41d4-a716-446655440002",
+        "Name": "Charles Leclerc",
+        "Team": "Scuderia Ferrari HP"
+    },
+    {
+        "Id": "550e8400-e29b-41d4-a716-446655440003",
+        "Name": "Lewis Hamilton",
+        "Team": "Scuderia Ferrari HP"
+    },
+    {
+        "Id": "550e8400-e29b-41d4-a716-446655440004",
+        "Name": "George Russell",
+        "Team": "Mercedes-AMG Petronas F1 Team"
+    },
+    {
+        "Id": "550e8400-e29b-41d4-a716-446655440005",
+        "Name": "Kimi Antonelli",
+        "Team": "Mercedes-AMG Petronas F1 Team"
+    },
+    {
+        "Id": "550e8400-e29b-41d4-a716-446655440006",
+        "Name": "Lando Norris",
+        "Team": "McLaren F1 Team"
+    },
+    {
+        "Id": "550e8400-e29b-41d4-a716-446655440007",
+        "Name": "Oscar Piastri",
+        "Team": "McLaren F1 Team"
+    },
+    {
+        "Id": "550e8400-e29b-41d4-a716-446655440008",
+        "Name": "Fernando Alonso",
+        "Team": "Aston Martin Aramco F1 Team"
+    },
+    {
+        "Id": "550e8400-e29b-41d4-a716-446655440009",
+        "Name": "Lance Stroll",
+        "Team": "Aston Martin Aramco F1 Team"
+    },
+    {
+        "Id": "550e8400-e29b-41d4-a716-446655440010",
+        "Name": "Pierre Gasly",
+        "Team": "BWT Alpine F1 Team"
+    },
+    {
+        "Id": "550e8400-e29b-41d4-a716-446655440011",
+        "Name": "Jack Doohan",
+        "Team": "BWT Alpine F1 Team"
+    },
+    {
+        "Id": "550e8400-e29b-41d4-a716-446655440012",
+        "Name": "Yuki Tsunoda",
+        "Team": "Visa Cash App Racing Bulls"
+    },
+    {
+        "Id": "550e8400-e29b-41d4-a716-446655440013",
+        "Name": "Isack Hadjar",
+        "Team": "Visa Cash App Racing Bulls"
+    },
+    {
+        "Id": "550e8400-e29b-41d4-a716-446655440014",
+        "Name": "Esteban Ocon",
+        "Team": "MoneyGram Haas F1 Team"
+    },
+    {
+        "Id": "550e8400-e29b-41d4-a716-446655440015",
+        "Name": "Oliver Bearman",
+        "Team": "MoneyGram Haas F1 Team"
+    },
+    {
+        "Id": "550e8400-e29b-41d4-a716-446655440016",
+        "Name": "Alex Albon",
+        "Team": "Williams Racing"
+    },
+    {
+        "Id": "550e8400-e29b-41d4-a716-446655440017",
+        "Name": "Carlos Sainz",
+        "Team": "Williams Racing"
+    },
+    {
+        "Id": "550e8400-e29b-41d4-a716-446655440018",
+        "Name": "Nico Hulkenberg",
+        "Team": "Kick Sauber F1 Team"
+    },
+    {
+        "Id": "550e8400-e29b-41d4-a716-446655440019",
+        "Name": "Gabriel Bortoleto",
+        "Team": "Kick Sauber F1 Team"
+    }
+]

@@ -1,7 +1,7 @@
 package models
 
 type Driver struct {
-	Id   int
+	Id   string
 	Name string
 	Team string
 }

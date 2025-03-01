@@ -8,7 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func Races(client *firestore.Client) gin.HandlerFunc {
+func GetRaces(client *firestore.Client) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		races, err := repositories.GetAllRaces(client)
 		if err != nil {

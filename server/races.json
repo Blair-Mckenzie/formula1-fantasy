@@ -9,8 +9,8 @@
             "url": "https://en.wikipedia.org/wiki/Albert_Park_Circuit",
             "circuitName": "Albert Park Grand Prix Circuit",
             "location": {
-                "lat": "-37.8497",
-                "lng": "144.968",
+                "lat": -37.8497,
+                "lng": 144.968,
                 "country": "Australia"
             }
         },
@@ -27,8 +27,8 @@
             "url": "https://en.wikipedia.org/wiki/Shanghai_International_Circuit",
             "circuitName": "Shanghai International Circuit",
             "location": {
-                "lat": "31.3389",
-                "lng": "121.22",
+                "lat": 31.3389,
+                "lng": 121.22,
                 "country": "China"
             }
         },
@@ -45,8 +45,8 @@
             "url": "https://en.wikipedia.org/wiki/Suzuka_International_Racing_Course",
             "circuitName": "Suzuka Circuit",
             "location": {
-                "lat": "34.843100000000014",
-                "lng": "136.541",
+                "lat": 34.8431,
+                "lng": 136.541,
                 "country": "Japan"
             }
         },
@@ -63,8 +63,8 @@
             "url": "https://en.wikipedia.org/wiki/Bahrain_International_Circuit",
             "circuitName": "Bahrain International Circuit",
             "location": {
-                "lat": "26.0325",
-                "lng": "50.5106",
+                "lat": 26.0325,
+                "lng": 50.5106,
                 "country": "Bahrain"
             }
         },
@@ -81,8 +81,8 @@
             "url": "https://en.wikipedia.org/wiki/Jeddah_Corniche_Circuit",
             "circuitName": "Jeddah Corniche Circuit",
             "location": {
-                "lat": "21.631899999999998",
-                "lng": "39.1044",
+                "lat": 21.6319,
+                "lng": 39.1044,
                 "country": "Saudi Arabia"
             }
         },
@@ -99,8 +99,8 @@
             "url": "https://en.wikipedia.org/wiki/Miami_International_Autodrome",
             "circuitName": "Miami International Autodrome",
             "location": {
-                "lat": "25.9581",
-                "lng": "-80.2389",
+                "lat": 25.9581,
+                "lng": -80.2389,
                 "country": "USA"
             }
         },
@@ -117,8 +117,8 @@
             "url": "https://en.wikipedia.org/wiki/Imola_Circuit",
             "circuitName": "Autodromo Enzo e Dino Ferrari",
             "location": {
-                "lat": "44.343899999999984",
-                "lng": "11.7167",
+                "lat": 44.3439,
+                "lng": 11.7167,
                 "country": "Italy"
             }
         },
@@ -135,8 +135,8 @@
             "url": "https://en.wikipedia.org/wiki/Circuit_de_Monaco",
             "circuitName": "Circuit de Monaco",
             "location": {
-                "lat": "43.7347",
-                "lng": "7.42056",
+                "lat": 43.7347,
+                "lng": 7.42056,
                 "country": "Monaco"
             }
         },
@@ -153,8 +153,8 @@
             "url": "https://en.wikipedia.org/wiki/Circuit_de_Barcelona-Catalunya",
             "circuitName": "Circuit de Barcelona-Catalunya",
             "location": {
-                "lat": "41.57",
-                "lng": "2.26111",
+                "lat": 41.57,
+                "lng": 2.26111,
                 "country": "Spain"
             }
         },
@@ -171,8 +171,8 @@
             "url": "https://en.wikipedia.org/wiki/Circuit_Gilles_Villeneuve",
             "circuitName": "Circuit Gilles Villeneuve",
             "location": {
-                "lat": "45.5",
-                "lng": "-73.5228",
+                "lat": 45.5,
+                "lng": -73.5228,
                 "country": "Canada"
             }
         },
@@ -189,8 +189,8 @@
             "url": "https://en.wikipedia.org/wiki/Red_Bull_Ring",
             "circuitName": "Red Bull Ring",
             "location": {
-                "lat": "47.2197",
-                "lng": "14.7647",
+                "lat": 47.2197,
+                "lng": 14.7647,
                 "country": "Austria"
             }
         },
@@ -207,8 +207,8 @@
             "url": "https://en.wikipedia.org/wiki/Silverstone_Circuit",
             "circuitName": "Silverstone Circuit",
             "location": {
-                "lat": "52.0786",
-                "lng": "-1.01694",
+                "lat": 52.0786,
+                "lng": -1.01694,
                 "country": "UK"
             }
         },
@@ -225,8 +225,8 @@
             "url": "https://en.wikipedia.org/wiki/Circuit_de_Spa-Francorchamps",
             "circuitName": "Circuit de Spa-Francorchamps",
             "location": {
-                "lat": "50.4372",
-                "lng": "5.97139",
+                "lat": 50.4372,
+                "lng": 5.97139,
                 "country": "Belgium"
             }
         },
@@ -243,8 +243,8 @@
             "url": "https://en.wikipedia.org/wiki/Hungaroring",
             "circuitName": "Hungaroring",
             "location": {
-                "lat": "47.5789",
-                "lng": "19.2486",
+                "lat": 47.5789,
+                "lng": 19.2486,
                 "country": "Hungary"
             }
         },
@@ -261,8 +261,8 @@
             "url": "https://en.wikipedia.org/wiki/Circuit_Zandvoort",
             "circuitName": "Circuit Park Zandvoort",
             "location": {
-                "lat": "52.3888",
-                "lng": "4.54092",
+                "lat": 52.3888,
+                "lng": 4.54092,
                 "country": "Netherlands"
             }
         },
@@ -279,8 +279,8 @@
             "url": "https://en.wikipedia.org/wiki/Monza_Circuit",
             "circuitName": "Autodromo Nazionale di Monza",
             "location": {
-                "lat": "45.615599999999986",
-                "lng": "9.28111",
+                "lat": 45.6156,
+                "lng": 9.28111,
                 "country": "Italy"
             }
         },
@@ -297,8 +297,8 @@
             "url": "https://en.wikipedia.org/wiki/Baku_City_Circuit",
             "circuitName": "Baku City Circuit",
             "location": {
-                "lat": "40.3725",
-                "lng": "49.8533",
+                "lat": 40.3725,
+                "lng": 49.8533,
                 "country": "Azerbaijan"
             }
         },
@@ -315,8 +315,8 @@
             "url": "https://en.wikipedia.org/wiki/Marina_Bay_Street_Circuit",
             "circuitName": "Marina Bay Street Circuit",
             "location": {
-                "lat": "1.2914",
-                "lng": "103.864",
+                "lat": 1.2914,
+                "lng": 103.864,
                 "country": "Singapore"
             }
         },
@@ -333,8 +333,8 @@
             "url": "https://en.wikipedia.org/wiki/Circuit_of_the_Americas",
             "circuitName": "Circuit of the Americas",
             "location": {
-                "lat": "30.1328",
-                "lng": "-97.6411",
+                "lat": 30.1328,
+                "lng": -97.6411,
                 "country": "USA"
             }
         },
@@ -351,8 +351,8 @@
             "url": "https://en.wikipedia.org/wiki/Aut%C3%B3dromo_Hermanos_Rodr%C3%ADguez",
             "circuitName": "Autódromo Hermanos Rodríguez",
             "location": {
-                "lat": "19.4042",
-                "lng": "-99.0907",
+                "lat": 19.4042,
+                "lng": -99.0907,
                 "country": "Mexico"
             }
         },
@@ -369,8 +369,8 @@
             "url": "https://en.wikipedia.org/wiki/Interlagos_Circuit",
             "circuitName": "Autódromo José Carlos Pace",
             "location": {
-                "lat": "-23.7036",
-                "lng": "-46.69969999999999",
+                "lat": -23.7036,
+                "lng": -46.6997,
                 "country": "Brazil"
             }
         },
@@ -387,8 +387,8 @@
             "url": "https://en.wikipedia.org/wiki/Las_Vegas_Grand_Prix#Circuit",
             "circuitName": "Las Vegas Strip Street Circuit",
             "location": {
-                "lat": "36.1147",
-                "lng": "-115.173",
+                "lat": 36.1147,
+                "lng": -115.173,
                 "country": "United States"
             }
         },
@@ -405,8 +405,8 @@
             "url": "https://en.wikipedia.org/wiki/Lusail_International_Circuit",
             "circuitName": "Losail International Circuit",
             "location": {
-                "lat": "25.48999999999998",
-                "lng": "51.4542",
+                "lat": 25.490,
+                "lng": 51.4542,
                 "country": "Qatar"
             }
         },
@@ -423,8 +423,8 @@
             "url": "https://en.wikipedia.org/wiki/Yas_Marina_Circuit",
             "circuitName": "Yas Marina Circuit",
             "location": {
-                "lat": "24.4672",
-                "lng": "54.6031",
+                "lat": 24.4672,
+                "lng": 54.6031,
                 "country": "UAE"
             }
         },

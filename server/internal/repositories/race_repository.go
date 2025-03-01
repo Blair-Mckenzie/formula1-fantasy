@@ -36,15 +36,17 @@ func GetAllRaces(client *firestore.Client) ([]models.Race, error) {
 func GetRaceByID(client *firestore.Client, raceId string) (*models.Race, error) {
 	ctx := context.Background()
 
-	doc, err := client.Collection("races").Doc(raceId).Get(ctx)
-	if err != nil {
+	iter := client.Collection("races").Where("raceId", "==", raceId).Limit(1).Documents(ctx)
+	defer iter.Stop()
+	doc, err := iter.Next()
+	if err == iterator.Done {
 		return nil, errors.New("race not found")
 	}
 
 	var race models.Race
 	if err := doc.DataTo(&race); err != nil {
 		log.Printf("Error decoding document: %v", err)
-			return nil, err
+		return nil, err
 	}
 
 	return &race, nil

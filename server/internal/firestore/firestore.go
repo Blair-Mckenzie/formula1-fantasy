@@ -30,6 +30,12 @@ func CreateClient() (*firestore.Client, error) {
 
 func InsertGrandPrix(client *firestore.Client, race models.Race) error {
 	ctx := context.Background()
-	_, err := client.Collection("races").Doc(race.RaceId).Set(ctx, race)
+	_, _, err := client.Collection("races").Add(ctx, race)
+	return err
+}
+
+func InsertDriver(client *firestore.Client, driver models.Driver) error {
+	ctx := context.Background()
+	_, _, err := client.Collection("drivers").Add(ctx, driver)
 	return err
 }

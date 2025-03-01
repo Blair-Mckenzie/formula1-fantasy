@@ -9,22 +9,22 @@ import (
 )
 
 
-func StartFirestoreEmulator() error {
-	cmd := exec.Command("firebase", "emulators:start", "--only", "firestore")
+func StartFirebaseEmulators() error {
+	cmd := exec.Command("firebase", "emulators:start")
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 
 	go func() {
 		err := cmd.Run()
 		if err != nil {
-			log.Fatalf("Failed to start Firestore emulator: %v", err)
+			log.Fatalf("Failed to start Firebase emulators: %v", err)
 		}
 	}()
 	
 	return nil
 }
 
-func LoadData(filename string) ([]models.Race, error) {
+func LoadRaces(filename string) ([]models.Race, error) {
 	file, err := os.Open(filename)
 	if err != nil {
 		return nil, err
@@ -37,4 +37,19 @@ func LoadData(filename string) ([]models.Race, error) {
 	}
 
 	return races, nil
+}
+
+func LoadDrivers(filename string) ([]models.Driver, error) {
+	file, err := os.Open(filename)
+	if err != nil {
+		return nil, err
+	}
+	defer file.Close()
+
+	var drivers []models.Driver
+	if err := json.NewDecoder(file).Decode(&drivers); err != nil {
+		return nil, err
+	}
+
+	return drivers, nil
 }

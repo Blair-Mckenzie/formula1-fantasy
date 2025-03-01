@@ -1,9 +1,9 @@
-package db
+package firestore
 
 import (
 	"context"
 	"log"
-	"root/models"
+	"root/internal/models"
 
 	"cloud.google.com/go/firestore"
 	firebase "firebase.google.com/go"
@@ -22,10 +22,10 @@ func CreateClient() (*firestore.Client, error) {
 	client, err := app.Firestore(ctx)
 	if err != nil {
 		log.Print("error initialising client")
-		log.Fatalln(err)
+		return nil, err
 	}
 
-	return client, err
+	return client, nil
 }
 
 func InsertGrandPrix(client *firestore.Client, race models.Race) error {

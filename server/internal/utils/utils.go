@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 	"os/exec"
-	"root/models"
+	"root/internal/models"
 )
 
 

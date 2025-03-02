@@ -2,17 +2,31 @@ package firestore
 
 import (
 	"context"
+	"encoding/json"
 	"log"
+	"os"
 	"root/internal/models"
 
 	"cloud.google.com/go/firestore"
 	firebase "firebase.google.com/go"
+	"google.golang.org/api/option"
 )
 
 func CreateClient() (*firestore.Client, error) {
+	credentialsJSON := os.Getenv("FIREBASE_SERVICE_ACCOUNT")
+	if credentialsJSON == "" {
+		log.Fatal("FIREBASE_SERVICE_ACCOUNT is not set")
+	}
+
+	var credentials map[string]interface{}
+	if err := json.Unmarshal([]byte(credentialsJSON), &credentials); err != nil {
+		log.Fatalf("Failed to parse Firebase credentials: %v", err)
+	}
+
+	opt := option.WithCredentialsJSON([]byte(credentialsJSON))
+
 	ctx := context.Background()
-	conf := &firebase.Config{ProjectID: "formula1-fantasy-31eb5"}
-	app, err := firebase.NewApp(ctx, conf)
+	app, err := firebase.NewApp(ctx, nil, opt)
 
 	if err != nil {
 		log.Printf("error initialising app: %v", err)

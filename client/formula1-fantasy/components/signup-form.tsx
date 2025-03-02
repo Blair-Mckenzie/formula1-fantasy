@@ -4,14 +4,10 @@ import { Input } from "@/components/ui/input";
 import { BottomGradient, SubmitButton } from "./submit-button";
 import { IconBrandGoogle } from "@tabler/icons-react";
 import { useState } from "react";
-import { app } from "@/app/firebase";
-import { getAuth, createUserWithEmailAndPassword, connectAuthEmulator } from "firebase/auth";
 import { useRouter } from "next/navigation";
 
 
 export const SignupForm = () => {
-    const auth = getAuth(app)
-    connectAuthEmulator(auth, "http://127.0.0.1:9099");
     const [formData, setFormData] = useState({
         userName: "",
         email: "",
@@ -29,10 +25,24 @@ export const SignupForm = () => {
         setError(null);
 
         try {
-            await createUserWithEmailAndPassword(auth, formData.email, formData.password);
+            const response = await fetch("/api/signup", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (!response.ok) {
+                throw new Error("Failed to sign up");
+            }
             router.push("/home");
         } catch (error) {
-            setError((error as any).message);
+            if (error instanceof Error) {
+                setError(error.message);
+            } else {
+                setError("An unknown error occurred.");
+            }
         }
     };
 

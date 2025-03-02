@@ -16,7 +16,7 @@ export default function Home() {
     useEffect(() => {
         const fetchRaces = async () => {
             try {
-                const response = await fetch("http://localhost:3001/api/v1/formula1/races");
+                const response = await fetch("/api/v1/formula1/races");
                 if (!response.ok) {
                     throw new Error("Failed to fetch races");
                 }

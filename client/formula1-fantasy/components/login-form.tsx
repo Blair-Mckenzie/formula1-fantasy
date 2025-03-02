@@ -3,14 +3,10 @@ import { Input } from "@/components/ui/input";
 import { LabelInputContainer } from "./label-input-container";
 import { BottomGradient, SubmitButton } from "./submit-button";
 import { IconBrandGoogle } from "@tabler/icons-react";
-import { app } from "@/app/firebase";
-import { getAuth, connectAuthEmulator, signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export const LoginForm = () => {
-  const auth = getAuth(app)
-  connectAuthEmulator(auth, "http://127.0.0.1:9099");
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -27,10 +23,24 @@ export const LoginForm = () => {
     setError(null);
 
     try {
-      await signInWithEmailAndPassword(auth, formData.email, formData.password);
+      const response = await fetch("/api/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to login");
+      }
       router.push("/home");
     } catch (error) {
-      setError((error as any).message);
+      if (error instanceof Error) {
+        setError(error.message);
+      } else {
+        setError("An unknown error occurred.");
+      }
     }
   };
 
@@ -42,7 +52,7 @@ export const LoginForm = () => {
       </LabelInputContainer>
       <LabelInputContainer className="mb-4">
         <Label htmlFor="password">Password</Label>
-        <Input id="password" placeholder="••••••••••••••••" type="password" onChange={handleChange}/>
+        <Input id="password" placeholder="••••••••••••••••" type="password" onChange={handleChange} />
       </LabelInputContainer>
       <SubmitButton text="Login →" />
       {error && <p className="text-red-500 text-sm">{error}</p>}

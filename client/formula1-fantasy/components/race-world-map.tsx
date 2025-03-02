@@ -1,7 +1,6 @@
 "use client";
 import WorldMap from "@/components/ui/world-map";
 import { Race } from "@/models/race";
-import { motion } from "motion/react";
 
 interface RaceWorldMapProps {
     races: Race[];

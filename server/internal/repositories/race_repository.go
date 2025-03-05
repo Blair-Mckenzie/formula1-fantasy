@@ -35,12 +35,11 @@ func GetAllRaces(client *firestore.Client) ([]models.Race, error) {
 
 func GetRaceByID(client *firestore.Client, raceId string) (*models.Race, error) {
 	ctx := context.Background()
-
-	iter := client.Collection("races").Where("raceId", "==", raceId).Limit(1).Documents(ctx)
+	iter := client.Collection("races").Where("RaceId", "==", raceId).Limit(1).Documents(ctx)
 	defer iter.Stop()
 	doc, err := iter.Next()
 	if err == iterator.Done {
-		return nil, errors.New("race not found")
+		return nil, errors.New("race not found for raceId: " + raceId)
 	}
 
 	var race models.Race

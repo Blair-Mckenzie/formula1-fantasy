@@ -6,18 +6,23 @@ import (
 	"os"
 	"time"
 
-	"github.com/gin-contrib/cors"
-	"github.com/gin-gonic/gin"
 	"root/internal/firestore"
 	"root/internal/utils"
 	"root/routes"
+
+	"github.com/gin-contrib/cors"
+	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
 )
 
 func main() {
-	// Set this to true when developing locally with the firestore emulator
-	localDev := false
+	err := godotenv.Load(".env")
 
-	if localDev {
+	if err != nil {
+	  log.Fatalf("Error loading .env file")
+	}
+
+	if os.Getenv("PRODUCTION") == "false" {	
 		err := utils.StartFirebaseEmulators()
 		if err != nil {
 			log.Fatalf("Failed to start Firestore emulator: %v", err)
@@ -25,9 +30,9 @@ func main() {
 
 		time.Sleep(3 * time.Second)
 
-		os.Setenv("FIRESTORE_EMULATOR_HOST", "localhost:8080")
+		os.Setenv("FIRESTORE_EMULATOR_HOST", "localhost:8070")
 
-		client, err := firestore.CreateClient()
+		fireStoreclient, _, err := firestore.CreateClient()
 		if err != nil {
 			log.Printf("Error creating client %v", err)
 		}
@@ -36,7 +41,7 @@ func main() {
 			log.Fatalf("Error loading data %v", err)
 		}
 		for _, race := range races {
-			err := firestore.InsertGrandPrix(client, race)
+			err := firestore.InsertGrandPrix(fireStoreclient, race)
 			if err != nil {
 				log.Printf("Failed to insert Grand Prix (%s): %v", race.RaceName, err)
 			} else {
@@ -49,7 +54,7 @@ func main() {
 			log.Fatalf("Error loading data %v", err)
 		}
 		for _, driver := range drivers {
-			err := firestore.InsertDriver(client, driver)
+			err := firestore.InsertDriver(fireStoreclient, driver)
 			if err != nil {
 				log.Printf("Failed to insert Grand Prix (%s): %v", driver.Name, err)
 			} else {
@@ -58,11 +63,12 @@ func main() {
 		}
 	}
 
-	client, err := firestore.CreateClient()
+	fireStoreclient, authClient, err := firestore.CreateClient()
 	if err != nil {
-		log.Printf("Error creating client %v", err)
+		log.Printf("Error creating fireStore or auth client %v", err)
 	}
-	log.Printf("Client created successfully %v", client)
+	log.Printf("Firestore Client created successfully %v", fireStoreclient)
+	log.Printf("Auth Client created successfully %v", authClient)
 	router := gin.Default()
 	router.Use(cors.New(cors.Config{
 		AllowOrigins:     []string{"http://localhost:3000"}, // Allow Next.js frontend
@@ -73,7 +79,7 @@ func main() {
 
 	api := router.Group("/api")
 
-	routes.SetupV1Routes(api, client)
+	routes.SetupV1Routes(api, fireStoreclient, authClient)
 
-	router.Run(":3001")
+	router.Run()
 }

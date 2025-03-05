@@ -8,9 +8,8 @@ import (
 	"root/internal/models"
 )
 
-
 func StartFirebaseEmulators() error {
-	cmd := exec.Command("firebase", "emulators:start")
+	cmd := exec.Command("firebase", "emulators:start", "--only", "firestore")
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 
@@ -20,7 +19,7 @@ func StartFirebaseEmulators() error {
 			log.Fatalf("Failed to start Firebase emulators: %v", err)
 		}
 	}()
-	
+
 	return nil
 }
 

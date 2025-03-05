@@ -10,6 +10,7 @@ type Race struct {
 	Circuit    Circuit   `json:"circuit"`
 	Date       time.Time `json:"date"`
 	CutoffTime time.Time `json:"cutoffTime"`
+	IsSprint   bool      `json:"isSprint"`
 }
 
 type Circuit struct {

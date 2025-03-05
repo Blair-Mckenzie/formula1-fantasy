@@ -1,7 +1,7 @@
 package models
 
 type Driver struct {
-	Id   string
-	Name string
-	Team string
+	Id   string	`json:"id"`
+	Name string `json:"name"`
+	Team string	`json:"team"`
 }

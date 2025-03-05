@@ -6,6 +6,8 @@ import (
 	"os"
 	"os/exec"
 	"root/internal/models"
+
+	"github.com/joho/godotenv"
 )
 
 func StartFirebaseEmulators() error {
@@ -51,4 +53,15 @@ func LoadDrivers(filename string) ([]models.Driver, error) {
 	}
 
 	return drivers, nil
+}
+
+func LoadEnv() {
+	if _, err := os.Stat(".env"); os.IsNotExist(err) {
+		log.Println(".env file not found. Using system environment variables.")
+		return
+	}
+
+	if err := godotenv.Load(); err != nil {
+		log.Fatalf("Error loading .env file: %v", err)
+	}
 }

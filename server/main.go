@@ -12,15 +12,10 @@ import (
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	"github.com/joho/godotenv"
 )
 
 func main() {
-	err := godotenv.Load(".env")
-
-	if err != nil {
-	  log.Fatalf("Error loading .env file")
-	}
+	utils.LoadEnv()
 
 	if os.Getenv("PRODUCTION") == "false" {	
 		err := utils.StartFirebaseEmulators()

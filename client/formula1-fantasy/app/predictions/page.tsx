@@ -1,5 +1,16 @@
-"use client";
-import React, { useEffect, useState } from "react";
+"use client"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form"
+import { z } from "zod"
+import Image from 'next/image'
+import { Driver } from "@/models/driver";
+import { Button } from "@/components/ui/button"
+import {
+    Form,
+    FormField,
+    FormItem,
+    FormLabel,
+} from "@/components/ui/form"
 import {
     Select,
     SelectContent,
@@ -7,9 +18,24 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
-import { Driver } from "@/models/driver";
+import { useEffect, useState } from "react"
 
-export default function Predictions() {
+const FormSchema = z.object({
+    email: z
+        .string({
+            required_error: "Please select an email to display.",
+        })
+        .email(),
+})
+
+export default function PredictionsForm() {
+    const form = useForm<z.infer<typeof FormSchema>>({
+        resolver: zodResolver(FormSchema),
+    })
+
+    function onSubmit(data: z.infer<typeof FormSchema>) {
+        console.log(JSON.stringify(data, null, 2));
+    }
 
     const [drivers, setDrivers] = useState<Driver[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
@@ -18,7 +44,7 @@ export default function Predictions() {
     useEffect(() => {
         const fetchDrivers = async () => {
             try {
-                const response = await fetch("/api/v1/formula1/drivers");
+                const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/v1/formula1/drivers`);
                 if (!response.ok) {
                     throw new Error("Failed to fetch drivers");
                 }
@@ -50,18 +76,138 @@ export default function Predictions() {
             </div>
         );
     }
+
     return (
-        <Select>
-            <SelectTrigger className="w-[180px]">
-                <SelectValue placeholder="Select a driver" />
-            </SelectTrigger>
-            <SelectContent>
-                {drivers.map((driver) => (
-                    <SelectItem key={driver.id} value={driver.id}>
-                        {driver.name}
-                    </SelectItem>
-                ))}
-            </SelectContent>
-        </Select>
+        <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="w-full mt-5 space-y-6 flex flex-col items-center gap-2">
+                <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel>Pole Position</FormLabel>
+                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                <SelectTrigger className="w-[250px] h-[75px]">
+                                    <SelectValue placeholder="Select a driver" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    {drivers.map((driver) => (
+                                        <SelectItem key={driver.id} value={driver.id}>
+                                            <Image src={driver.imagePath} alt="alt" width="64" height="64"></Image>{driver.name}
+                                        </SelectItem>
+                                    ))}
+                                </SelectContent>
+                            </Select>
+                        </FormItem>
+                    )}
+                />
+                <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel>Winner</FormLabel>
+                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                <SelectTrigger className="w-[250px] h-[75px]">
+                                    <SelectValue placeholder="Select a driver" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    {drivers.map((driver) => (
+                                        <SelectItem key={driver.id} value={driver.id}>
+                                            <Image src={driver.imagePath} alt="alt" width="64" height="64"></Image>{driver.name}
+                                        </SelectItem>
+                                    ))}
+                                </SelectContent>
+                            </Select>
+                        </FormItem>
+                    )}
+                />
+                <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel>2nd Place</FormLabel>
+                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                <SelectTrigger className="w-[250px] h-[75px]">
+                                    <SelectValue placeholder="Select a driver" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    {drivers.map((driver) => (
+                                        <SelectItem key={driver.id} value={driver.id}>
+                                            <Image src={driver.imagePath} alt="alt" width="64" height="64"></Image>{driver.name}
+                                        </SelectItem>
+                                    ))}
+                                </SelectContent>
+                            </Select>
+                        </FormItem>
+                    )}
+                />
+                <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel>3rd Place</FormLabel>
+                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                <SelectTrigger className="w-[250px] h-[75px]">
+                                    <SelectValue placeholder="Select a driver" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    {drivers.map((driver) => (
+                                        <SelectItem key={driver.id} value={driver.id}>
+                                            <Image src={driver.imagePath} alt="alt" width="64" height="64"></Image>{driver.name}
+                                        </SelectItem>
+                                    ))}
+                                </SelectContent>
+                            </Select>
+                        </FormItem>
+                    )}
+                />
+                <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel>Last Place</FormLabel>
+                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                <SelectTrigger className="w-[250px] h-[75px]">
+                                    <SelectValue placeholder="Select a driver" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    {drivers.map((driver) => (
+                                        <SelectItem key={driver.id} value={driver.id}>
+                                            <Image src={driver.imagePath} alt="alt" width="64" height="64"></Image>{driver.name}
+                                        </SelectItem>
+                                    ))}
+                                </SelectContent>
+                            </Select>
+                        </FormItem>
+                    )}
+                />
+                <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel>Classified finishers</FormLabel>
+                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                <SelectTrigger className="w-[250px] h-[75px]">
+                                    <SelectValue placeholder="Select a number" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    {[...Array(20)].map((_, index) => (
+                                        <SelectItem key={index + 1} value={(index + 1).toString()}>
+                                            {index + 1}
+                                        </SelectItem>
+                                    ))}
+                                </SelectContent>
+                            </Select>
+                        </FormItem>
+                    )}
+                />
+                <Button type="submit">Save Predictions</Button>
+            </form>
+        </Form>
     )
 }

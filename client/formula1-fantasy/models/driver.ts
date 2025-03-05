@@ -1,5 +1,6 @@
 export interface Driver {
     id: string;
     name: string;
-    team: string;   
+    team: string;
+    imagePath: string;   
 }

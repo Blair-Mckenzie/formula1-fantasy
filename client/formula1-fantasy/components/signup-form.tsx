@@ -32,7 +32,7 @@ export const SignupForm = () => {
             const user = userCredential.user;
 
             const idToken = await user.getIdToken();
-            await fetch("/api/v1/formula1/users", {
+            await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/v1/formula1/users`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

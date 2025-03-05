@@ -6,8 +6,9 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
 } from "@/components/ui/navigation-menu"
+import Link from "next/link";
 
-export function NavbarDemo() {
+export function NavbarComponent() {
     return (
         <div className="relative w-full flex items-center justify-center">
             <Navbar />
@@ -25,8 +26,10 @@ function Navbar() {
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <NavigationMenuLink>
-                        Predictions
+                    <NavigationMenuLink asChild>
+                        <Link href="/predictions">
+                            Predictions
+                        </Link>
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>

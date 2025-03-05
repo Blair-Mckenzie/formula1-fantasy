@@ -27,10 +27,8 @@ export default function RaceWorldMap({ races }: RaceWorldMapProps) {
     }));
 
     return (
-        <div className="py-10 dark:bg-black bg-white w-7/10">
-            <WorldMap
-                dots={dots}
-            />
+        <div className="py-6 sm:py-8 lg:py-10 dark:bg-black bg-white w-full sm:w-3/4 md:w-2/3 lg:w-1/2 mx-auto h-96 sm:h-[400px] md:h-[450px] lg:h-[500px]">
+            <WorldMap dots={dots} />
         </div>
     );
 }

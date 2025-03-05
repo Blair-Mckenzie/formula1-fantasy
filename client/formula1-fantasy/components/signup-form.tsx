@@ -5,11 +5,14 @@ import { BottomGradient, SubmitButton } from "./submit-button";
 import { IconBrandGoogle } from "@tabler/icons-react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { auth } from "@/app/firebase-config";
 
 
 export const SignupForm = () => {
     const [formData, setFormData] = useState({
-        userName: "",
+        firstName: "",
+        lastName: "",
         email: "",
         password: "",
     });
@@ -25,17 +28,36 @@ export const SignupForm = () => {
         setError(null);
 
         try {
-            const response = await fetch("/api/signup", {
+            const userCredential = await createUserWithEmailAndPassword(auth, formData.email, formData.password);
+            const user = userCredential.user;
+
+            const idToken = await user.getIdToken();
+            await fetch("/api/v1/formula1/users", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
+                    Authorization: `Bearer ${idToken}`,
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({
+                    name: formData.firstName + " " + formData.lastName,
+                    email: formData.email
+                }),
             });
-
-            if (!response.ok) {
-                throw new Error("Failed to sign up");
+            router.push("/home");
+        } catch (error) {
+            if (error instanceof Error) {
+                setError(error.message);
+            } else {
+                setError("An unknown error occurred.");
             }
+        }
+    };
+
+    const handleGoogleSignIn = async () => {
+        setError(null);
+        const provider = new GoogleAuthProvider();
+        try {
+            await signInWithPopup(auth, provider);
             router.push("/home");
         } catch (error) {
             if (error instanceof Error) {
@@ -50,8 +72,12 @@ export const SignupForm = () => {
         <form className="my-8" onSubmit={handleSubmit}>
             <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
                 <LabelInputContainer>
-                    <Label htmlFor="userName">Username</Label>
-                    <Input id="userName" placeholder="username" type="text" onChange={handleChange} />
+                    <Label htmlFor="firstName">First Name</Label>
+                    <Input id="firstName" placeholder="Lewis" type="text" onChange={handleChange} />
+                </LabelInputContainer>
+                <LabelInputContainer>
+                    <Label htmlFor="lastName">Last Name</Label>
+                    <Input id="lastName" placeholder="Hamilton" type="text" onChange={handleChange} />
                 </LabelInputContainer>
             </div>
             <LabelInputContainer className="mb-4">
@@ -73,7 +99,8 @@ export const SignupForm = () => {
             <div className="flex flex-col space-y-4">
                 <button
                     className=" relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
-                    type="submit"
+                    type="button"
+                    onClick={handleGoogleSignIn}
                 >
                     <IconBrandGoogle className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
                     <span className="text-neutral-700 dark:text-neutral-300 text-sm">

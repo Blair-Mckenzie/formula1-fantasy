@@ -5,6 +5,8 @@ import { BottomGradient, SubmitButton } from "./submit-button";
 import { IconBrandGoogle } from "@tabler/icons-react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "@/app/firebase-config";
 
 export const LoginForm = () => {
   const [formData, setFormData] = useState({
@@ -23,17 +25,7 @@ export const LoginForm = () => {
     setError(null);
 
     try {
-      const response = await fetch("/api/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to login");
-      }
+      await signInWithEmailAndPassword(auth, formData.email, formData.password);
       router.push("/home");
     } catch (error) {
       if (error instanceof Error) {

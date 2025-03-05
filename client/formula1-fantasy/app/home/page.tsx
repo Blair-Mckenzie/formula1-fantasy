@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Race } from "@/models/race";
 import RaceWorldMap from "@/components/race-world-map";
-import { NavbarDemo } from "@/components/navbar";
+import { NavbarComponent } from "@/components/navbar";
 
 
 export default function Home() {
@@ -33,29 +33,22 @@ export default function Home() {
     }, []);
 
     return (
-        <div>
-            <NavbarDemo />
-            <div className="flex flex-col items-center gap-10 h-screen bg-gray-100 dark:bg-black">
-                <h1 className="text-2xl font-bold">Welcome to Formula 1 Predictor! 🏎️</h1>
+        <div className="min-h-screen bg-gray-100 dark:bg-black">
+            <NavbarComponent />
+            <div className="flex flex-col items-center gap-8 px-4 py-6 sm:py-10 md:px-8">
+                <h1 className="text-2xl font-bold text-center text-gray-800 dark:text-white">The season at a glance</h1>
+
                 {loading ? (
-                    // 🔄 Show a loading spinner while fetching races
-                    <div className="flex flex-col items-center justify-center mt-6">
-                        <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-red-500 border-opacity-50"></div>
-                        <p className="text-gray-600 dark:text-gray-300 mt-2">Loading races...</p>
+                    <div className="flex flex-col items-center justify-center mt-8">
+                        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-red-500 border-opacity-50"></div>
+                        <p className="text-gray-600 dark:text-gray-300 mt-3">Loading races...</p>
                     </div>
                 ) : error ? (
-                    <p className="text-red-500 mt-6">Error: {error}</p>
+                    <p className="text-red-500 mt-6 text-center">{error}</p>
                 ) : (
-                    // ✅ Show the content once the data is loaded
-                    <>
+                    <div className="w-full max-w-4xl">
                         <RaceWorldMap races={races} />
-                        <button
-                            className="mt-4 px-6 py-2 bg-black text-white rounded-md hover:bg-gray-800"
-                            onClick={() => router.push("/")}
-                        >
-                            Go to Homepage
-                        </button>
-                    </>
+                    </div>
                 )}
             </div>
         </div>

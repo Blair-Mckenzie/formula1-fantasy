@@ -1,14 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import { Race } from "@/models/race";
 import RaceWorldMap from "@/components/race-world-map";
 import { NavbarComponent } from "@/components/navbar";
 
 
 export default function Home() {
-    const router = useRouter();
-
     const [races, setRaces] = useState<Race[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);

@@ -66,7 +66,7 @@ func main() {
 	log.Printf("Auth Client created successfully %v", authClient)
 	router := gin.Default()
 	router.Use(cors.New(cors.Config{
-		AllowOrigins:     []string{"http://localhost:3000"}, // Allow Next.js frontend
+		AllowOrigins:     []string{"http://localhost:3000", "https://gallant-inspiration-production.up.railway.app"}, // Allow Next.js frontend
 		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 		AllowHeaders:     []string{"Content-Type"},
 		AllowCredentials: true,

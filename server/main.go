@@ -68,7 +68,7 @@ func main() {
 	router.Use(cors.New(cors.Config{
 		AllowOrigins:     []string{"http://localhost:3000", "https://gallant-inspiration-production.up.railway.app"}, // Allow Next.js frontend
 		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
-		AllowHeaders:     []string{"Content-Type"},
+		AllowHeaders:     []string{"Content-Type", "Access-Control-Allow-Headers", "Authorization"},
 		AllowCredentials: true,
 	}))
 

@@ -33,8 +33,10 @@ function Navbar() {
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                        <Link href="/leaderboard">
                         Leaderboard
+                        </Link>
                     </NavigationMenuLink>
                 </NavigationMenuItem>
             </NavigationMenuList>

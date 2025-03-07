@@ -11,6 +11,7 @@ type Race struct {
 	Date       time.Time `json:"date"`
 	CutoffTime time.Time `json:"cutoffTime"`
 	IsSprint   bool      `json:"isSprint"`
+	ImagePath  string    `json:"imagePath"`
 }
 
 type Circuit struct {

@@ -16,7 +16,8 @@
         },
         "date": "2025-03-16T04:00:00Z",
         "cutoffTime": "2025-03-15T04:00:00Z",
-        "isSprint": false
+        "isSprint": false,
+        "imagePath": "/circuits/Australia carbon.png"
     },
     {
         "year": 2025,
@@ -35,7 +36,8 @@
         },
         "date": "2025-03-23T07:00:00Z",
         "cutoffTime": "2025-03-21T06:30:00Z",
-        "isSprint": true
+        "isSprint": true,
+        "imagePath": "/circuits/China carbon.png"
     },
     {
         "year": 2025,
@@ -54,7 +56,8 @@
         },
         "date": "2025-04-06T06:00:00Z",
         "cutoffTime": "2025-04-05T06:00:00Z",
-        "isSprint": false
+        "isSprint": false,
+        "imagePath": "/circuits/Japan carbon.png"
     },
     {
         "year": 2025,
@@ -73,7 +76,8 @@
         },
         "date": "2025-04-13T16:00:00Z",
         "cutoffTime": "2025-04-12T16:00:00Z",
-        "isSprint":false
+        "isSprint":false,
+        "imagePath": "/circuits/Bahrain carbon.png"
     },
     {
         "year": 2025,
@@ -92,7 +96,8 @@
         },
         "date": "2025-04-20T18:00:00Z",
         "cutoffTime": "2025-04-19T17:00:00Z",
-        "isSprint": false
+        "isSprint": false,
+        "imagePath": "/circuits/Saudi Arabia carbon.png"
     },
     {
         "year": 2025,
@@ -111,7 +116,8 @@
         },
         "date": "2025-05-04T21:00:00Z",
         "cutoffTime": "2025-05-02T20:30:00Z",
-        "isSprint": true
+        "isSprint": true,
+        "imagePath": "/circuits/Miami carbon.png"
     },
     {
         "year": 2025,
@@ -130,7 +136,8 @@
         },
         "date": "2025-05-18T14:00:00Z",
         "cutoffTime": "2025-05-17T14:00:00Z",
-        "isSprint": false
+        "isSprint": false,
+        "imagePath": "/circuits/Emilia-Romagna carbon.png"
     },
     {
         "year": 2025,
@@ -149,7 +156,8 @@
         },
         "date": "2025-05-25T14:00:00Z",
         "cutoffTime": "2025-05-24T14:00:00Z",
-        "isSprint": false
+        "isSprint": false,
+        "imagePath": "/circuits/Monaco carbon.png"
     },
     {
         "year": 2025,
@@ -168,7 +176,8 @@
         },
         "date": "2025-06-01T14:00:00Z",
         "cutoffTime": "2025-05-31T14:00:00Z",
-        "isSprint": false
+        "isSprint": false,
+        "imagePath": "/circuits/Spain carbon.png"
     },
     {
         "year": 2025,
@@ -187,7 +196,8 @@
         },
         "date": "2025-06-15T19:00:00Z",
         "cutoffTime": "2025-06-14T20:00:00Z",
-        "isSprint": false
+        "isSprint": false,
+        "imagePath": "/circuits/Canada carbon.png"
     },
     {
         "year": 2025,
@@ -206,7 +216,8 @@
         },
         "date": "2025-06-29T14:00:00Z",
         "cutoffTime": "2025-06-28T14:00:00Z",
-        "isSprint": false
+        "isSprint": false,
+        "imagePath": "/circuits/Austria carbon.png"
     },
     {
         "year": 2025,
@@ -225,7 +236,8 @@
         },
         "date": "2025-07-06T15:00:00Z",
         "cutoffTime": "2025-07-05T14:00:00Z",
-        "isSprint": false
+        "isSprint": false,
+        "imagePath": "/circuits/Great Britain carbon.png"
     },
     {
         "year": 2025,
@@ -244,7 +256,8 @@
         },
         "date": "2025-07-27T14:00:00Z",
         "cutoffTime": "2025-07-25T14:30:00Z",
-        "isSprint": true
+        "isSprint": true,
+        "imagePath": "/circuits/Belgium carbon.png"
     },
     {
         "year": 2025,
@@ -263,7 +276,8 @@
         },
         "date": "2025-08-03T14:00:00Z",
         "cutoffTime": "2025-08-02T14:00:00Z",
-        "isSprint": false
+        "isSprint": false,
+        "imagePath": "/circuits/Hungary carbon.png"
     },
     {
         "year": 2025,
@@ -282,7 +296,8 @@
         },
         "date": "2025-08-31T14:00:00Z",
         "cutoffTime": "2025-08-30T13:00:00Z",
-        "isSprint": false
+        "isSprint": false,
+        "imagePath": "/circuits/Netherlands carbon.png"
     },
     {
         "year": 2025,
@@ -301,7 +316,8 @@
         },
         "date": "2025-09-07T14:00:00Z",
         "cutoffTime": "2025-09-06T14:00:00Z",
-        "isSprint": false
+        "isSprint": false,
+        "imagePath": "/circuits/Italy carbon.png"
     },
     {
         "year": 2025,
@@ -320,7 +336,8 @@
         },
         "date": "2025-09-21T12:00:00Z",
         "cutoffTime": "2025-09-20T12:00:00Z",
-        "isSprint": false
+        "isSprint": false,
+        "imagePath": "/circuits/Azerbaijan carbon.png"
     },
     {
         "year": 2025,
@@ -339,7 +356,8 @@
         },
         "date": "2025-10-05T13:00:00Z",
         "cutoffTime": "2025-10-04T13:00:00Z",
-        "isSprint": false
+        "isSprint": false,
+        "imagePath": "/circuits/Singapore carbon.png"
     },
     {
         "year": 2025,
@@ -358,7 +376,8 @@
         },
         "date": "2025-10-19T20:00:00Z",
         "cutoffTime": "2025-10-17T21:30:00Z",
-        "isSprint": true
+        "isSprint": true,
+        "imagePath": "/circuits/United States carbon.png"
     },
     {
         "year": 2025,
@@ -377,7 +396,8 @@
         },
         "date": "2025-10-26T20:00:00Z",
         "cutoffTime": "2025-10-25T21:00:00Z",
-        "isSprint": false
+        "isSprint": false,
+        "imagePath": "/circuits/Mexico carbon.png"
     },
     {
         "year": 2025,
@@ -396,7 +416,8 @@
         },
         "date": "2025-11-09T17:00:00Z",
         "cutoffTime": "2025-11-07T17:30:00Z",
-        "isSprint": true
+        "isSprint": true,
+        "imagePath": "/circuits/Brazil carbon.png"
     },
     {
         "year": 2025,
@@ -415,7 +436,8 @@
         },
         "date": "2025-11-22T04:00:00Z",
         "cutoffTime": "2025-11-22T03:00:00Z",
-        "isSprint": false
+        "isSprint": false,
+        "imagePath": "/circuits/Las Vegas carbon.png"
     },
     {
         "year": 2025,
@@ -434,7 +456,8 @@
         },
         "date": "2025-11-30T16:00:00Z",
         "cutoffTime": "2025-11-28T16:30:00Z",
-        "isSprint": true
+        "isSprint": true,
+        "imagePath": "/circuits/Qatar carbon.png"
     },
     {
         "year": 2025,
@@ -453,6 +476,7 @@
         },
         "date": "2025-12-07T13:00:00Z",
         "cutoffTime": "2025-12-06T13:00:00Z",
-        "isSprint": false
+        "isSprint": false,
+        "imagePath": "/circuits/Abu Dhabi carbon.png"
     }
 ]

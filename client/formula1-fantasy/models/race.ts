@@ -6,6 +6,7 @@ export interface Race {
     circuit: Circuit;
     date: string;
     cutoffTime: string;
+    imagePath: string;
 }
 
 interface Circuit {

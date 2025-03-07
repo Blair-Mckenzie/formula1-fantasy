@@ -7,6 +7,7 @@ import {
     NavigationMenuList,
 } from "@/components/ui/navigation-menu"
 import Link from "next/link";
+import { ModeToggle } from "./mode-toggle";
 
 export function NavbarComponent() {
     return (
@@ -38,6 +39,9 @@ function Navbar() {
                         Leaderboard
                         </Link>
                     </NavigationMenuLink>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                <ModeToggle></ModeToggle>
                 </NavigationMenuItem>
             </NavigationMenuList>
         </NavigationMenu>

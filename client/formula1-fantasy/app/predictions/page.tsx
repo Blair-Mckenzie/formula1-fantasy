@@ -228,7 +228,7 @@ function PredictionsForm({
 }
 
 export default function Predictions() {
-  const { isPending, isError, data, error } = useQuery<Race[]>({
+  const { isPending, isError, data } = useQuery<Race[]>({
     queryKey: ["races"],
     queryFn: async () => {
       const response = await fetch(

@@ -6,10 +6,7 @@ import { SignupForm } from "@/components/signup-form";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
-      <div className="p-2">
-        
-      </div>
+    <div className="flex flex-col items-center h-screen sm:h-screen lg:h-[550px] max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200 p-4">
         Welcome to Formula 1 Predictor
       </h2>
